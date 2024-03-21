@@ -1,1 +1,4 @@
-# uin23ak4_booksearch_SFOUK
+# Book Library developed using:
+- React + Vite
+- Sass
+- OpneLibrary API
