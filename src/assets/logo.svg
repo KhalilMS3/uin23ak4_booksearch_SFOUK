@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="620" height="138" viewBox="0 0 620 138">
-  <g id="Group_6" data-name="Group 6" transform="translate(124 -65.927)">
-    <text id="BookSe_kr" data-name="BookSe  kr" transform="translate(-124 174.927)" fill="#f8eff0" font-size="116" font-family="Rubik-Medium, Rubik" font-weight="500" letter-spacing="0.031em"><tspan x="0" y="0" xml:space="preserve">BookSe  kr</tspan></text>
-    <g id="Group_7" data-name="Group 7">
-      <g id="Group_1" data-name="Group 1" transform="translate(313.732 65.609)">
-        <text id="e" transform="translate(0.268 109.317)" fill="#4883d3" font-size="117" font-family="Rubik-Medium, Rubik" font-weight="500" letter-spacing="0.031em"><tspan x="0" y="0">e</tspan></text>
-        <line id="Line_4" data-name="Line 4" x2="13.117" y2="22.299" transform="translate(45.732 104.751)" fill="none" stroke="#4883d3" stroke-linecap="round" stroke-width="10"/>
+  <g id="LogoLink" transform="translate(101 -66.927)">
+    <g id="Group_6" data-name="Group 6" transform="translate(23 1)">
+      <text id="BookSe_kr" data-name="BookSe  kr" transform="translate(-124 174.927)" fill="#f8eff0" font-size="116" font-family="Rubik-Medium, Rubik" font-weight="500" letter-spacing="0.031em"><tspan x="0" y="0" xml:space="preserve">BookSe  kr</tspan></text>
+      <g id="Group_7" data-name="Group 7">
+        <g id="Group_1" data-name="Group 1" transform="translate(313.732 65.609)">
+          <text id="e" transform="translate(0.268 109.317)" fill="#4883d3" font-size="117" font-family="Rubik-Medium, Rubik" font-weight="500" letter-spacing="0.031em"><tspan x="0" y="0">e</tspan></text>
+          <line id="Line_4" data-name="Line 4" x2="13.117" y2="22.299" transform="translate(45.732 104.751)" fill="none" stroke="#4883d3" stroke-linecap="round" stroke-width="10"/>
+        </g>
       </g>
     </g>
   </g>

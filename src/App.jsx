@@ -1,10 +1,14 @@
 import './App.css'
-
+import './Style/main.scss'
+import Layout from './Components/Layout'
+import BookCard from './Components/BookCard'
 function App() {
   
   return (
     <>
-      <img className='logo' src="./src/assets/logo.svg" alt="BookSeekr logo" />
+      <Layout>
+      </Layout>
+        <BookCard />
     </>
   )
 }
