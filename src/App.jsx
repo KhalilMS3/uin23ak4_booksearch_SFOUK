@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <Layout>
-      </Layout>
         <BookCard />
+      </Layout>
     </>
   )
 }

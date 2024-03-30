@@ -1,0 +1,66 @@
+$background-color: #0B1522;
+$primary-blue: #2E5385; 
+$primary-blue-light: #2e5485;
+$secondary-white: #fff;
+$secondary-white-dark: #a5a5a5;
+
+$primary-font: 'Rubik', sans-serif;
+$max-size: 1000px;
+
+.books-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+    article{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      
+      width: 200px;
+      max-width: 25%;
+      background-color: $primary-blue;
+      padding: 1.5rem;
+      
+      border-radius: 10px;
+      transition: box-shadow ease-in-out .3s;
+      &:hover{
+        box-shadow: 0 0 10px $secondary-white;
+        cursor: pointer;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+      h1{
+        font-size: 1.7rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+      p{
+        margin-top: .5rem;
+      }
+      .book-subInfo{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      
+      a{
+        padding: 15px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        color: $primary-blue;
+        background-color: $secondary-white;
+        border-radius: 10px;
+        transition: all ease .3s;
+        &:hover{
+          box-shadow: (0 0 1em #ffffffaa);
+          cursor: pointer;
+        }
+      }
+    }
+}
