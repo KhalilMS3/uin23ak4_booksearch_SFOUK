@@ -10,7 +10,7 @@ $max-size: 1000px;
 .books-section{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 
     article{
@@ -19,7 +19,7 @@ $max-size: 1000px;
       flex-grow: 1;
       
       width: 200px;
-      max-width: 25%;
+      max-width: 30%;
       background-color: $primary-blue;
       padding: 1.5rem;
       
@@ -62,5 +62,14 @@ $max-size: 1000px;
           cursor: pointer;
         }
       }
+      &:nth-child(even){
+      background-color: $secondary-white;
+      color: $primary-blue;
+        a{
+          color: $secondary-white;
+          background-color: $primary-blue;
+        }
+      }
+      
     }
 }

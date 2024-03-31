@@ -1,69 +1,22 @@
 import React from 'react'
 
-export default function BookCard() {
+export default function BookCard({book}) {
   return (
     <>
     <section className='books-section'>
+      {
+      book?.map(item =>
       <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
+          <img src={`https://covers.openlibrary.org/b/olid/${item.cover_edition_key}.jpg`} alt={item.title}/>
+          <h2>{item.title}</h2>
+          <p>{item.author_name}</p>
           <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
+            <span>{item.first_publish_year} 📅</span>
+            <span>{item.ratings_average} ⭐</span>
           </div>
           <a href="#">Get Book</a>
-      </article>
-      <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
-          <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
-          </div>
-          <a href="#">Get Book</a>
-      </article>
-      <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
-          <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
-          </div>
-          <a href="#">Get Book</a>
-      </article>
-      <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
-          <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
-          </div>
-          <a href="#">Get Book</a>
-      </article>
-      <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
-          <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
-          </div>
-          <a href="#">Get Book</a>
-      </article>
-      <article>
-          <img src="./src/assets/bookCover.jpg" alt="book cover"/>
-          <h1>Starry Nights</h1>
-          <p>Kathrine W. Rose</p>
-          <div className='book-subInfo'>
-            <span>30.03.2024 📅</span>
-            <span>4.2 ⭐</span>
-          </div>
-          <a href="#">Get Book</a>
-      </article>
+      </article>)
+    }
     </section>
     </>
   )
