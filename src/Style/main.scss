@@ -5,7 +5,7 @@
 
 $background-color: #0B1522;
 $primary-blue: #2E5385;
-$primary-blue-light: #2e5485;
+$primary-blue-light: #4883D3;
 $secondary-white: #fff;
 
 $primary-font: 'Rubik', sans-serif;
@@ -53,5 +53,18 @@ footer{
       filter: none;
   
     }
+  
+  }
+
+  @keyframes fade-in {
+    0% {
+      transform: scale(0);
+      
+    }
+    100% {
+      transform: scale(1);
+     
+    }
+   
   
   }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Layout({children, setQuery}) {
+  
   const [search, setSearch] = useState("")
   const [userInput, setUserInput] = useState("")
   const [dataFetched, setDataFetched] = useState(false)
@@ -19,7 +20,6 @@ export default function Layout({children, setQuery}) {
   const handleChange = (event)=>{
     if (event.target.value.length >= 3){
       setSearch(event.target.value)
-
     }else{
       setSearch('james+bond')
     }
@@ -41,8 +41,10 @@ export default function Layout({children, setQuery}) {
           {
             dataFetched === false || userInput === "" ? <h1>Make a search</h1> : <h1>Search results of: {userInput}</h1>
           }
-          
+          <section className='books-section'>
+            
           {children}
+          </section>
         </main>
         <footer>
           <p>

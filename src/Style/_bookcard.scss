@@ -25,8 +25,9 @@ $max-size: 1000px;
       
       border-radius: 10px;
       transition: box-shadow ease-in-out .3s;
+      animation: fade-in .4s;
       &:hover{
-        box-shadow: 0 0 10px $secondary-white;
+        box-shadow: 0 0 2px 6px $secondary-white;
         cursor: pointer;
       }
       img{
@@ -62,9 +63,15 @@ $max-size: 1000px;
           cursor: pointer;
         }
       }
+
       &:nth-child(even){
       background-color: $secondary-white;
       color: $primary-blue;
+
+        &:hover{
+          box-shadow: 0 0 2px 6px $primary-blue-light;
+          cursor: pointer;
+        }
         a{
           color: $secondary-white;
           background-color: $primary-blue;
