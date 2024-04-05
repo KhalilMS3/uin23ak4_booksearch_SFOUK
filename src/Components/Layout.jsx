@@ -2,15 +2,14 @@
 import { useState } from 'react'
 import Header from './Header'
 
-export default function Layout({children, setQuery, dataLoadedMsg}) {
+export default function Layout({children, setQuery, dataFetched, setDataFetched, dataLoadedMsg, setDataLoadedMsg}) {
   
     const [userInput, setUserInput] = useState("")
-    const [dataFetched, setDataFetched] = useState(false)
 
     const resetSearch = ()=>{
       setQuery("james bond")
-      setDataFetched(false)
       setUserInput("")
+      setDataLoadedMsg("")
     }
   return (
     <>
@@ -18,7 +17,7 @@ export default function Layout({children, setQuery, dataLoadedMsg}) {
        <Header setQuery={setQuery} setDataFetched={setDataFetched} setUserInput={setUserInput}/>
         <main>
           {
-            dataFetched === false || userInput === "" 
+            userInput === "" 
             ? 
             <h1>Make a search</h1> 
             : 
@@ -30,7 +29,8 @@ export default function Layout({children, setQuery, dataLoadedMsg}) {
             </>
           }
           {
-            dataLoadedMsg != "" && dataFetched != false?
+            dataFetched === false
+            ?
             <h2>{dataLoadedMsg}</h2>
             :
             <section className='books-section'>           

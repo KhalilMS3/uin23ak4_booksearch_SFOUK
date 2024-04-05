@@ -9,6 +9,7 @@ function App() {
   const [book, setBook] = useState([])
   const [query, setQuery] = useState("james bond")
   const [dataLoadedMsg, setDataLoadedMsg] = useState("")
+  const [dataFetched, setDataFetched] = useState()
 
   const getData = async()=>{
     try{
@@ -18,9 +19,11 @@ function App() {
       
       if(data.docs === null || data.docs.length === 0){
         setDataLoadedMsg("No result found 😔")
-        console.log(dataLoadedMsg)
+        setDataFetched(false)
+        console.log(dataFetched)
       }else{
         setBook(data.docs)
+        setDataFetched(true)
         console.log(data.docs)
       }
     }catch{
@@ -37,7 +40,7 @@ function App() {
 
   return (
     <>
-      <Layout setQuery={setQuery} dataLoadedMsg={dataLoadedMsg}>
+      <Layout setQuery={setQuery} dataFetched={dataFetched} setDataFetched={setDataFetched} dataLoadedMsg={dataLoadedMsg} setDataLoadedMsg={setDataLoadedMsg}>
           <SearchResult book={book} />
       </Layout>
     </>

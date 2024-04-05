@@ -9,16 +9,17 @@ export default function Header({setQuery, setDataFetched, setUserInput}) {
     
     if(search !== "james+bond"){
       setUserInput(search)
+      setDataFetched(false)
     }else{
       setUserInput("")
     }
     setQuery(search)
-    setDataFetched(true)
 }
 
     const handleChange = (event)=>{
     if (event.target.value.length >= 3){
         setSearch(event.target.value)
+        
     }
     else{
         setSearch('james+bond')
