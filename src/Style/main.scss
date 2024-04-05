@@ -12,7 +12,7 @@ $primary-font: 'Rubik', sans-serif;
 $max-size: 1000px;
 
 /* Fixed text styles */
-p, h1, h2, span, a, button{font-family: $primary-font;}
+p, h1, h2, h3, span, a, button{font-family: $primary-font;}
 h1, h2, a{font-weight: 700;}
 p, button{font-weight: 500;}
 span{font-weight: 450;}
@@ -29,6 +29,15 @@ body{
 main{
     width: 100%;
     margin: 100px 0;
+    .search-info-section{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      button{
+        padding: 5px 10px;
+        height: 2rem;
+      }
+    }
 }
 
 footer{

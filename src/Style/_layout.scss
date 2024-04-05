@@ -38,12 +38,14 @@ $max-size: 1000px;
                         
                         font-family: $primary-font;
                         font-weight: 500;
+                        font-size: 1rem;
                         transition: border-color .3s ease;
                         
                         &::placeholder{
                             color: #2e5485;
                             opacity: .7;
                             font-weight: 500;
+                            
                         }
 
                         &:focus{

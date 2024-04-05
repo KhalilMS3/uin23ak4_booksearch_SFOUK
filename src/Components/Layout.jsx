@@ -1,50 +1,43 @@
-import React, { useState } from 'react'
 
-export default function Layout({children, setQuery}) {
+import { useState } from 'react'
+import Header from './Header'
+
+export default function Layout({children, setQuery, dataLoadedMsg}) {
   
-  const [search, setSearch] = useState("")
-  const [userInput, setUserInput] = useState("")
-  const [dataFetched, setDataFetched] = useState(false)
-  const handleSubmit = (e) =>{
-    e.preventDefault()
-    if(search !== "james+bond"){
-      setUserInput(search)
-    }else{
+    const [userInput, setUserInput] = useState("")
+    const [dataFetched, setDataFetched] = useState(false)
+
+    const resetSearch = ()=>{
+      setQuery("james bond")
+      setDataFetched(false)
       setUserInput("")
     }
-    setQuery(search)
-    setDataFetched(true)
-  }
-
-
-  const handleChange = (event)=>{
-    if (event.target.value.length >= 3){
-      setSearch(event.target.value)
-    }else{
-      setSearch('james+bond')
-    }
-   
-  }
- 
-
   return (
     <>
       <div id="container">
-        <header>
-            <img className='logo' src="./src/assets/Logo.svg" alt="BookSeekr logo" />
-            <form onSubmit={handleSubmit}>
-                <input className='search-bar' type="text" placeholder='Book name...' onChange={handleChange}/>
-                <button className='search-btn' type="submit">Search</button>
-            </form>
-        </header>
+       <Header setQuery={setQuery} setDataFetched={setDataFetched} setUserInput={setUserInput}/>
         <main>
           {
-            dataFetched === false || userInput === "" ? <h1>Make a search</h1> : <h1>Search results of: {userInput}</h1>
+            dataFetched === false || userInput === "" 
+            ? 
+            <h1>Make a search</h1> 
+            : 
+            <>
+            <section className="search-info-section">
+              <h1>Search results of: {userInput}</h1>
+              <button onClick={resetSearch}>Reset Search</button> 
+            </section>
+            </>
           }
-          <section className='books-section'>
-            
-          {children}
-          </section>
+          {
+            dataLoadedMsg != "" && dataFetched != false?
+            <h2>{dataLoadedMsg}</h2>
+            :
+            <section className='books-section'>           
+            {children}
+            </section>
+          }
+         
         </main>
         <footer>
           <p>
